@@ -150,3 +150,53 @@
   });
 
 })();
+
+  /**
+   * Project 3: Active navigation on scroll
+   */
+  const navLinks = Array.from(
+    document.querySelectorAll('#navmenu a[href^="#"]')
+  );
+
+  const navSections = navLinks
+    .map(link => {
+      const target = link.getAttribute('href');
+      return document.querySelector(target);
+    })
+    .filter(section => section !== null);
+
+  function updateActiveNavigation() {
+    const header = document.querySelector('#header');
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    const scrollPosition = window.scrollY + headerHeight + 140;
+
+    let currentSection = navSections[0];
+
+    navSections.forEach(section => {
+      if (section.offsetTop <= scrollPosition) {
+        currentSection = section;
+      }
+    });
+
+    navLinks.forEach(link => {
+      const isActive =
+        currentSection &&
+        link.getAttribute('href') === `#${currentSection.id}`;
+
+      link.classList.toggle('active', isActive);
+
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNavigation, {
+    passive: true
+  });
+
+  window.addEventListener('load', updateActiveNavigation);
+  window.addEventListener('resize', updateActiveNavigation);

@@ -3477,6 +3477,58 @@ article.p3-campus-card {
   }
 }
 
+/* =========================================================
+   PROJECT 3 - NAVIGATION POLISH
+========================================================= */
+
+@media (min-width: 1200px) {
+
+  #header .navmenu a {
+    position: relative;
+    transition: color 250ms ease;
+  }
+
+  #header .navmenu a::before {
+    height: 2px;
+    bottom: -5px;
+    border-radius: 5px;
+    background: linear-gradient(
+      90deg,
+      #E2BF4F,
+      #F3D979
+    );
+    transition: width 300ms ease;
+  }
+
+  #header .navmenu a.active,
+  #header .navmenu a:hover {
+    color: #F3D979;
+  }
+
+  #header .navmenu a.active::before,
+  #header .navmenu a:hover::before {
+    width: 100%;
+    visibility: visible;
+  }
+
+  #header .navmenu > ul {
+    gap: 25px;
+  }
+
+}
+
+/* Mobile active link */
+
+@media (max-width: 1199px) {
+
+  #header .navmenu a.active {
+    color: #E2BF4F;
+    font-weight: 700;
+  }
+
+}
+
+
 
 
 
