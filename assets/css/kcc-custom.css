@@ -3989,6 +3989,43 @@ article.p3-campus-card {
   }
 }
 
+/* =========================================================
+   PROJECT 3 - ACCESSIBILITY POLISH
+========================================================= */
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #F3D979;
+  outline-offset: 4px;
+}
+
+/* Navigation keyboard focus */
+#navmenu a:focus-visible {
+  color: #F3D979;
+}
+
+/* Prevent sticky header from covering section headings */
+html {
+  scroll-padding-top: 90px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
 
 
 

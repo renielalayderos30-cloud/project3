@@ -27,11 +27,23 @@
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
+  
+function mobileNavToogle() {
+  document.body.classList.toggle('mobile-nav-active');
+
+  mobileNavToggleBtn.classList.toggle('bi-list');
+  mobileNavToggleBtn.classList.toggle('bi-x');
+
+  const isOpen = document.body.classList.contains('mobile-nav-active');
+
+  mobileNavToggleBtn.setAttribute('aria-expanded', String(isOpen));
+
+  mobileNavToggleBtn.setAttribute(
+    'aria-label',
+    isOpen ? 'Close navigation menu' : 'Open navigation menu'
+  );
+}
+
   if (mobileNavToggleBtn) {
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
   }
