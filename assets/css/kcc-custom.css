@@ -3528,6 +3528,276 @@ article.p3-campus-card {
 
 }
 
+/* =========================================================
+   PROJECT 3 - FINAL RESPONSIVE POLISH
+========================================================= */
+
+/* TABLET */
+@media (max-width: 1199px) {
+
+  .header .container-xl {
+    gap: 12px;
+  }
+
+  .header .brand-name {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .header .brand-name small {
+    display: block;
+    font-size: 10px;
+  }
+
+  .header .btn-getstarted {
+    padding: 8px 11px;
+    font-size: 10px;
+  }
+
+  .navmenu .mobile-nav-toggle {
+    margin-left: 8px;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+  /* HEADER */
+  .header {
+    padding: 10px 0;
+  }
+
+  .header .container-xl {
+    gap: 7px;
+  }
+
+  .header .logo {
+    min-width: 0;
+  }
+
+  .header .logo img {
+    max-height: 35px;
+    width: 35px;
+    flex-shrink: 0;
+  }
+
+  .header .brand-name {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  .header .brand-name small {
+    font-size: 9px;
+  }
+
+  .header .btn-getstarted {
+    padding: 7px 9px;
+    margin-left: 2px;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  .header .btn-getstarted i {
+    font-size: 10px;
+  }
+
+  .navmenu .mobile-nav-toggle {
+    margin-left: 3px;
+    font-size: 23px;
+  }
+
+  /* HERO */
+  .project3-hero {
+    padding: 60px 0;
+  }
+
+  .kcc-hero-inner {
+    gap: 38px;
+  }
+
+  .kcc-hero-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    justify-content: center;
+  }
+
+  .kcc-hero-copy h1 {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    letter-spacing: -0.5px;
+  }
+
+  .kcc-hero-description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .kcc-hero-artwork {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  /* ABOUT */
+  .p3-about {
+    padding: 65px 0;
+  }
+
+  .p3-about-grid {
+    gap: 45px;
+  }
+
+  .p3-about-image-frame {
+    min-height: 340px;
+  }
+
+  .p3-about-content h2 {
+    font-size: 2.25rem;
+  }
+
+  .p3-about-values {
+    gap: 10px;
+  }
+
+  /* WHY CHOOSE KCC */
+  .p3-why-section {
+    padding: 65px 0;
+  }
+
+  .p3-why-heading h2 {
+    font-size: 2.3rem;
+  }
+
+  .p3-why-card {
+    min-height: 270px;
+  }
+
+  /* PROGRAMS */
+  .p3-programs-section {
+    padding: 65px 0;
+  }
+
+  .p3-programs-heading h2 {
+    font-size: 2.3rem;
+  }
+
+  /* CAMPUS LIFE */
+  .p3-campus-section {
+    padding: 65px 0;
+  }
+
+  .p3-campus-heading h2 {
+    font-size: 2.3rem;
+  }
+
+  /* NEWS */
+  .news-section {
+    padding: 65px 0;
+  }
+
+  .news-heading {
+    gap: 14px;
+  }
+
+  .news-heading .section-heading {
+    font-size: 2.3rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-grid article img {
+    height: 220px;
+  }
+
+  /* CONTACT */
+  .p3-contact-section {
+    padding: 65px 0;
+  }
+
+  .p3-contact-content h2 {
+    font-size: 2.3rem;
+  }
+
+  /* FOOTER */
+  .p3-footer-main {
+    gap: 28px 18px;
+  }
+
+}
+
+/* SMALL PHONES */
+@media (max-width: 400px) {
+
+  .header .brand-name {
+    font-size: 10px;
+  }
+
+  .header .btn-getstarted {
+    padding: 6px 7px;
+    font-size: 8px;
+  }
+
+  .header .btn-getstarted i {
+    font-size: 9px;
+  }
+
+  .kcc-hero-copy h1 {
+    font-size: 2.1rem;
+  }
+
+  .kcc-hero-motto {
+    font-size: 7px;
+    letter-spacing: 0.6px;
+    gap: 6px;
+  }
+
+  .p3-about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .p3-footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .p3-footer-bottom-label {
+    font-size: 8px;
+  }
+
+}
+
+/* BETTER TOUCH AND KEYBOARD INTERACTION */
+.p3-campus-card:focus-visible,
+.p3-news-read-link:focus-visible,
+.p3-contact-option:focus-visible,
+.p3-footer a:focus-visible {
+  outline: 2px solid #F3D979;
+  outline-offset: 4px;
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+
+  .project3-hero,
+  .p3-about,
+  .p3-why-section,
+  .p3-programs-section,
+  .p3-campus-section {
+    scroll-behavior: auto;
+  }
+
+  .p3-campus-card img,
+  .p3-why-card,
+  .p3-program-card,
+  .p3-contact-option,
+  .p3-news-featured,
+  .p3-news-side-card {
+    transition: none !important;
+  }
+
+}
+
+
 
 
 
