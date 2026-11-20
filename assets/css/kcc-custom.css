@@ -4025,6 +4025,32 @@ html {
   }
 }
 
+/* =========================================================
+   PROJECT 3 - DEVELOPER PROFILE CREDIT
+========================================================= */
+
+.p3-footer-developer {
+  margin: 0;
+  color: #A9BAD5;
+  font-size: 11px;
+}
+
+.p3-footer-developer a {
+  color: #E2BF4F;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 250ms ease, text-shadow 250ms ease;
+}
+
+.p3-footer-developer a:hover {
+  color: #F3D979;
+  text-shadow: 0 0 12px rgba(226, 191, 79, 0.45);
+}
+
+.p3-footer-developer a i {
+  font-size: 10px;
+}
+
 
 
 
