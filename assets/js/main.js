@@ -212,3 +212,37 @@ function mobileNavToogle() {
 
   window.addEventListener('load', updateActiveNavigation);
   window.addEventListener('resize', updateActiveNavigation);
+
+
+/* PROJECT 3 - KEYBOARD NAVIGATION IMPROVEMENT */
+
+// Close the mobile menu when Escape is pressed.
+document.addEventListener('keydown', function(event) {
+
+  if (event.key !== 'Escape') return;
+
+  const toggleBtn = document.querySelector('.mobile-nav-toggle');
+
+  if (
+    toggleBtn &&
+    document.body.classList.contains('mobile-nav-active')
+  ) {
+    document.body.classList.remove('mobile-nav-active');
+
+    toggleBtn.classList.remove('bi-x');
+    toggleBtn.classList.add('bi-list');
+
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.setAttribute('aria-label', 'Open navigation menu');
+
+    toggleBtn.focus();
+  }
+
+});
+
+// Automatically update the footer copyright year.
+const copyrightYear = document.getElementById('copyright-year');
+
+if (copyrightYear) {
+  copyrightYear.textContent = new Date().getFullYear();
+}
