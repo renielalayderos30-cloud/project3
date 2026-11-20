@@ -3450,6 +3450,32 @@ article.p3-campus-card {
   }
 
 }
+/* Smaller Header Inquiry Button */
+.header .btn-getstarted {
+  padding: 9px 15px;
+  font-size: 11px;
+  line-height: 1.3;
+  margin-left: 12px;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.header .btn-getstarted i {
+  font-size: 12px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 576px) {
+  .header .btn-getstarted {
+    padding: 7px 10px;
+    font-size: 9px;
+    margin-left: 6px;
+  }
+
+  .header .btn-getstarted i {
+    font-size: 10px;
+  }
+}
 
 
 
