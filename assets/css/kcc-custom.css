@@ -2639,4 +2639,395 @@ p {
 
 }
 
+/* =========================================================
+   PROJECT 3 - CAMPUS LIFE EDITORIAL GALLERY
+========================================================= */
+
+.p3-campus-section {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0;
+  background: #061735;
+}
+
+/* HEADING */
+
+.p3-campus-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 45px;
+}
+
+.p3-campus-heading > div {
+  max-width: 650px;
+}
+
+.p3-campus-heading h2 {
+  margin: 0;
+  color: #F3E4B0;
+  font-family: var(--heading-font);
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 1.17;
+}
+
+.p3-campus-heading h2 span {
+  display: block;
+  color: #E2BF4F;
+}
+
+.p3-campus-heading > p {
+  max-width: 390px;
+  margin-bottom: 6px;
+  color: #A9BAD5;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* GALLERY GRID */
+
+.p3-campus-gallery {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: repeat(2, minmax(240px, 1fr));
+  gap: 17px;
+}
+
+.p3-campus-card {
+  position: relative;
+  min-width: 0;
+  min-height: 240px;
+  overflow: hidden;
+
+  background: #0D3473;
+  border: 1px solid rgba(226, 191, 79, 0.24);
+  border-radius: 7px;
+
+  isolation: isolate;
+}
+
+/* LARGE FEATURE CARD */
+
+.p3-campus-feature {
+  grid-row: span 2;
+  min-height: 500px;
+}
+
+/* IMAGE */
+
+.p3-campus-card > img {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    transform 700ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 500ms ease;
+}
+
+.p3-campus-card:hover > img {
+  transform: scale(1.065);
+  filter: saturate(1.12);
+}
+
+/* IMAGE OVERLAY */
+
+.p3-campus-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(4, 16, 39, 0.97) 0%,
+    rgba(6, 23, 53, 0.65) 38%,
+    rgba(6, 23, 53, 0.05) 100%
+  );
+
+  transition: background 350ms ease;
+}
+
+.p3-campus-card:hover .p3-campus-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(4, 16, 39, 0.98) 0%,
+    rgba(6, 23, 53, 0.72) 48%,
+    rgba(6, 23, 53, 0.12) 100%
+  );
+}
+
+/* IMAGE INDEX */
+
+.p3-campus-index {
+  position: absolute;
+  top: 21px;
+  left: 22px;
+  z-index: 2;
+
+  color: #F3D979;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+
+  padding: 9px 12px;
+  background: rgba(6, 23, 53, 0.76);
+  border: 1px solid rgba(226, 191, 79, 0.35);
+  border-radius: 3px;
+}
+
+/* CARD CONTENT */
+
+.p3-campus-content {
+  position: absolute;
+  z-index: 2;
+  left: 27px;
+  right: 27px;
+  bottom: 27px;
+}
+
+.p3-campus-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 13px;
+
+  color: #E2BF4F;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.p3-campus-category i {
+  font-size: 14px;
+}
+
+.p3-campus-content h3 {
+  max-width: 500px;
+  margin: 0;
+
+  color: #F3E4B0;
+  font-family: var(--heading-font);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.p3-campus-content p {
+  max-width: 440px;
+  margin: 12px 0 0;
+
+  color: #C0CEE2;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* SMALLER CARDS */
+
+.p3-campus-secondary .p3-campus-content {
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+}
+
+.p3-campus-secondary .p3-campus-content h3 {
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+}
+
+.p3-campus-secondary .p3-campus-category {
+  margin-bottom: 9px;
+  font-size: 9px;
+}
+
+/* CORNER LABEL */
+
+.p3-campus-corner {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  z-index: 2;
+
+  color: rgba(243, 217, 121, 0.7);
+  font-family: var(--heading-font);
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* BOTTOM FOOTER */
+
+.p3-campus-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-top: 22px;
+  padding: 22px 25px;
+
+  background: linear-gradient(
+    100deg,
+    rgba(13, 52, 115, 0.66),
+    rgba(8, 34, 77, 0.6)
+  );
+
+  border: 1px solid rgba(226, 191, 79, 0.23);
+  border-radius: 5px;
+}
+
+.p3-campus-footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 45px;
+
+  width: 45px;
+  height: 45px;
+
+  color: #061735;
+  background: #E2BF4F;
+  border-radius: 5px;
+  font-size: 21px;
+}
+
+.p3-campus-footer-text {
+  flex: 1;
+}
+
+.p3-campus-footer-text > span {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #E2BF4F;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.p3-campus-footer-text p {
+  margin: 0;
+  color: #C0CEE2;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.p3-campus-footer-mark {
+  color: rgba(226, 191, 79, 0.7);
+  font-family: var(--heading-font);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+  .p3-campus-section {
+    padding: 85px 0;
+  }
+
+  .p3-campus-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .p3-campus-heading > p {
+    max-width: 650px;
+  }
+
+  .p3-campus-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(400px, auto) minmax(240px, auto);
+  }
+
+  .p3-campus-feature {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .p3-campus-section {
+    padding: 70px 0;
+  }
+
+  .p3-campus-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .p3-campus-card,
+  .p3-campus-feature {
+    min-height: 280px;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .p3-campus-feature {
+    min-height: 390px;
+  }
+
+  .p3-campus-content {
+    left: 19px;
+    right: 19px;
+    bottom: 20px;
+  }
+
+  .p3-campus-content h3 {
+    font-size: 1.55rem;
+  }
+
+  .p3-campus-footer {
+    align-items: flex-start;
+    gap: 13px;
+    padding: 18px;
+  }
+
+  .p3-campus-footer-mark {
+    font-size: 25px;
+  }
+
+}
+/* Clickable Campus Life Cards */
+
+.p3-campus-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.p3-campus-card:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.p3-campus-card:focus-visible {
+  outline: 3px solid #F3D979;
+  outline-offset: 4px;
+}
+
+/* PROJECT 3 - CAMPUS GALLERY NON-LINKED CARDS */
+
+article.p3-campus-card {
+  display: block;
+  cursor: default;
+  color: inherit;
+  text-decoration: none;
+}
+
+.p3-campus-disclaimer {
+  margin-top: 14px;
+  color: #8298B9;
+  font-size: 11px;
+  text-align: right;
+}
+
+
 
