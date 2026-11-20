@@ -3797,6 +3797,199 @@ article.p3-campus-card {
 
 }
 
+/* =========================================================
+   PROJECT 3 - NEWS SECTION VISUAL POLISH
+   Keep the original HTML layout and Facebook links.
+========================================================= */
+
+#news.news-section {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(23, 76, 152, 0.16),
+      transparent 38%
+    ),
+    #061735;
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+
+/* NEWS HEADING */
+
+#news .news-heading {
+  margin-bottom: 42px;
+}
+
+#news .news-heading .section-kicker {
+  color: #E2BF4F;
+  letter-spacing: 2px;
+}
+
+#news .news-heading .section-heading {
+  color: #F3E4B0;
+  font-family: var(--heading-font);
+}
+
+#news .news-heading .section-heading span {
+  color: #E2BF4F;
+}
+
+#news .news-heading > p {
+  color: #A9BAD5;
+  line-height: 1.9;
+}
+
+/* NEWS CARDS */
+
+#news .news-grid article {
+  background: linear-gradient(
+    145deg,
+    #103976,
+    #092550 70%,
+    #071C3E
+  );
+
+  border: 1px solid rgba(226, 191, 79, 0.22);
+  border-radius: 8px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 350ms ease,
+    border-color 350ms ease,
+    box-shadow 350ms ease;
+}
+
+#news .news-grid article:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(243, 217, 121, 0.75);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.28),
+    0 0 22px rgba(226, 191, 79, 0.07);
+}
+
+/* NEWS IMAGES */
+
+#news .news-story-image {
+  overflow: hidden;
+  background: #0D3473;
+}
+
+#news .news-story-image img {
+  display: block;
+  transition: transform 650ms ease;
+}
+
+#news .news-grid article:hover .news-story-image img {
+  transform: scale(1.045);
+}
+
+/* NEWS DATE */
+
+#news .news-date {
+  background: rgba(6, 23, 53, 0.94);
+  border: 1px solid rgba(226, 191, 79, 0.5);
+  border-radius: 5px;
+}
+
+#news .news-date strong {
+  color: #F3D979;
+}
+
+#news .news-date small {
+  color: #D5DFF0;
+}
+
+/* NEWS CONTENT */
+
+#news .news-story-content {
+  padding: 25px;
+}
+
+#news .news-category {
+  color: #E2BF4F;
+  font-size: 10px;
+  letter-spacing: 1.1px;
+}
+
+#news .news-story-content h3 {
+  color: #F3E4B0;
+  line-height: 1.4;
+}
+
+#news .news-story-content p {
+  color: #B7C7E0;
+  line-height: 1.8;
+}
+
+/* READ STORY LINKS */
+
+#news .news-read-link {
+  color: #E2BF4F;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  transition: gap 250ms ease, color 250ms ease;
+}
+
+#news .news-read-link:hover {
+  color: #F3D979;
+  gap: 14px;
+}
+
+#news .news-read-link i {
+  transition: transform 250ms ease;
+}
+
+#news .news-read-link:hover i {
+  transform: translate(3px, -3px);
+}
+
+/* CARD NUMBERS */
+
+#news .news-story-number {
+  color: rgba(243, 217, 121, 0.85);
+}
+
+/* BOTTOM NEWS PANEL */
+
+#news .news-bottom {
+  background: linear-gradient(
+    100deg,
+    rgba(13, 52, 115, 0.65),
+    rgba(8, 34, 77, 0.55)
+  );
+
+  border: 1px solid rgba(226, 191, 79, 0.24);
+  border-radius: 6px;
+}
+
+#news .news-bottom-label {
+  color: #E2BF4F;
+}
+
+#news .news-bottom-dot {
+  background: #E2BF4F;
+  box-shadow: 0 0 10px rgba(226, 191, 79, 0.55);
+}
+
+#news .news-bottom > p {
+  color: #B7C7E0;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  #news .news-grid article,
+  #news .news-story-image img {
+    transition: none !important;
+  }
+}
+
+
 
 
 
